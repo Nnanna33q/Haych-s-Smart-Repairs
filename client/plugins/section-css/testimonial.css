@@ -37,10 +37,9 @@
 }
 
 .ed-testimonial__author-img img {
-  empty-cells: ;
-  width: 45px;
-  height: 45px;
-  border-radius: 100%;
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 100% !important;
 }
 
 .ed-testimonial__author-info h5 {
