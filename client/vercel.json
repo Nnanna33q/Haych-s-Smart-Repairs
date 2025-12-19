@@ -1,12 +1,12 @@
 {
-    "redirects": [
+    "routes": [
         {
             "handle": "filesystem"
         },
 
         {
-            "source": "/(.*)",
-            "destination:": "404.html"
+            "src": "/(.*)",
+            "dest": "404.html"
         }
     ]
 }
