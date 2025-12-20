@@ -444,10 +444,11 @@
     let smoother = ScrollSmoother.create({
       smooth: 0.5,
       effects: true,
-      smoothTouch: 0.5,
+      smoothTouch: 0.01,
       normalizeScroll: false,
       ignoreMobileResize: true,
     });
+
   }
 
   /*======================================================================================
