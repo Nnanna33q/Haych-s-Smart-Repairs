@@ -578,6 +578,28 @@
   .ed-about--style-3 .ed-about__content .list-group-item {
     font-size: 16px;
   }
+  .about-testimonial-pad {
+    padding-bottom: 18px;
+  }
+  
+}
+
+.about-us-p {
+  padding: 8px 0;
+}
+
+.opening-hours {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-location > * {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.about-testimonial-bg {
+  background-color: var(--ed-white-color);
 }
 
 /*================================================================================================
