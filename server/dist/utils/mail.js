@@ -12,8 +12,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 import fs from 'node:fs';
 import path from "node:path";
-const host = 'smtp.mailersend.net';
-const port = 2525;
 let html = fs.readFileSync(path.resolve(import.meta.dirname + '../../../contact.html'), { encoding: 'utf-8' });
 export default function sendMail(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -24,9 +22,7 @@ export default function sendMail(req, res, next) {
                 .replace('{{email}}', email)
                 .replace('{{message}}', message);
             const transporter = nodemailer.createTransport({
-                host,
-                port,
-                secure: false,
+                service: 'gmail',
                 auth: {
                     user: process.env.EMAIL_USERNAME,
                     pass: process.env.EMAIL_PASSWORD

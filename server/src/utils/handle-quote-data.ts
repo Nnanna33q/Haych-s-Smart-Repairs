@@ -40,9 +40,7 @@ export default async function handleQuoteData(req: Request, res: Response) {
         html = html.replace('{{imageElement}}', imageElements.join(''));
 
         const transporter = nodemailer.createTransport({
-            host: 'smtp.mailersend.net',
-            port: 2525,
-            secure: false,
+            service: 'gmail',
             auth: {
                 user: process.env.EMAIL_USERNAME,
                 pass: process.env.EMAIL_PASSWORD
