@@ -250,8 +250,9 @@
                                             <h3 class="ed-contact__form-big-title ed-split-text right">
                                                 Contact Us Now
                                             </h3>
+                                            <div class="msg"></div>
                                         </div>
-                                        <form class="ed-contact__form-main">
+                                        <form class="ed-contact__form-main" novalidate>
                                             <div class="form-group">
                                                 <input id="name" name="name" placeholder="Full name" required=""
                                                     type="text" />
@@ -269,8 +270,11 @@
                                                     required=""></textarea>
                                             </div>
                                             <div class="ed-contact__form-btn">
-                                                <a class="ed-btn" href="404.html">Contact Us<i
-                                                        class="fi fi-rr-arrow-small-right"></i></a>
+                                                <button class="ed-btn contact-submit-btn" type="submit">
+                                                    Contact Us
+                                                    <i class="fi fi-rr-arrow-small-right"></i>
+                                                    <div class="spinner-button hidden"></div>
+                                                </button>
                                             </div>
                                         </form>
                                     </div>
@@ -432,6 +436,21 @@
         </svg>
     </div>
     <!-- End Back To Top -->
+
+    <script>
+        const env = {
+            BACKEND_DOMAIN: ''
+        }
+
+        if (window.location.host === '127.0.0.1:5500' || window.location.host.includes('localhost')) {
+            env.BACKEND_DOMAIN = 'http://localhost:3000'
+        } else {
+            env.BACKEND_DOMAIN = 'https://haychssmartrepairs.onrender.com'
+        }
+        window.env = env;
+
+        fetch(`${env.BACKEND_DOMAIN}/ping`).catch(() => {}) // Pings Render, For Faster Form Submission
+    </script>
     <script defer src="plugins/js/jquery.min.js"></script>
     <script defer src="plugins/js/jquery-migrate.js"></script>
     <script defer src="plugins/js/bootstrap.min.js"></script>
@@ -449,6 +468,7 @@
     <script defer src="plugins/js/nice-select.min.js"></script>
     <script defer src="plugins/js/backToTop.js"></script>
     <script defer src="plugins/js/active.js"></script>
+    <script defer src="plugins/js/contact-form.js"></script>
 </body>
 
 </html>

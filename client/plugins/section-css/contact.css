@@ -226,6 +226,12 @@
   border-radius: 8px;
   margin-bottom: 30px;
 }
+
+.ed-contact__card-info {
+  width: 100% !important;
+  word-wrap: break-word;
+}
+
 .ed-contact__card-info a {
   display: block;
   color: var(--ed-title-color);
@@ -411,6 +417,7 @@
   width: 0px !important;
   height: 0px !important;
   opacity: 0 !important;
+  padding: 0 !important
 }
 
 .upload-images {
