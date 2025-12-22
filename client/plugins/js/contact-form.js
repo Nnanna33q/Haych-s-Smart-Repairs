@@ -40,7 +40,7 @@ form.addEventListener('submit', async (e) => {
 
         console.log(data);
 
-        msg.innerText = 'Thank you! We’ve received your quote request and will get back to you as soon as possible';
+        msg.innerText = 'Thank you! We’ve received your contact request and will get back to you as soon as possible';
         msg.classList.remove('error-color');
         msg.classList.add('success-color');
         form.reset();
